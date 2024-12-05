@@ -67,7 +67,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.com/nokun/mirrorhall",
-                    "tag": "0.1.0"
+                    "tag": "0.1.1"
                 }
             ]
         }
