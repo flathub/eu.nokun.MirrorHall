@@ -1,7 +1,7 @@
 {
     "app-id": "eu.nokun.MirrorHall",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "48",
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "version": "24.08",
