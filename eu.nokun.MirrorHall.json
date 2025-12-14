@@ -1,10 +1,10 @@
 {
     "app-id": "eu.nokun.MirrorHall",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "47",
+    "runtime-version": "49",
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "24.08",
+            "version": "25.08",
             "directory": "lib/ffmpeg",
             "add-ld-path": ".",
             "no-autodownload": false,
@@ -12,7 +12,7 @@
         },
         "org.freedesktop.Platform.GStreamer.gstreamer-vaapi": {
             "directory": "lib/gstreamer-1.0",
-            "version": "24.08",
+            "version": "25.08",
             "autodelete": false,
             "no-autodownload": true,
             "add-ld-path": "lib",
