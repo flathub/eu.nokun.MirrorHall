@@ -3,13 +3,6 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
     "add-extensions": {
-        "org.freedesktop.Platform.ffmpeg-full": {
-            "version": "25.08",
-            "directory": "lib/ffmpeg",
-            "add-ld-path": ".",
-            "no-autodownload": false,
-            "autodelete": false
-        },
         "org.freedesktop.Platform.GStreamer.gstreamer-vaapi": {
             "directory": "lib/gstreamer-1.0",
             "version": "25.08",
@@ -44,7 +37,7 @@
         "*.a"
     ],
     "cleanup-commands": [
-        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg ${FLATPAK_DEST}/lib/gstreamer-1.0"
+        "mkdir -p ${FLATPAK_DEST}/lib/gstreamer-1.0"
     ],
     "modules": [
         "python3-requirements.json",
