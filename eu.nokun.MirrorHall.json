@@ -2,17 +2,6 @@
     "app-id": "eu.nokun.MirrorHall",
     "runtime": "org.gnome.Platform",
     "runtime-version": "49",
-    "add-extensions": {
-        "org.freedesktop.Platform.GStreamer.gstreamer-vaapi": {
-            "directory": "lib/gstreamer-1.0",
-            "version": "25.08",
-            "autodelete": false,
-            "no-autodownload": true,
-            "add-ld-path": "lib",
-            "download-if": "have-intel-gpu",
-            "autoprune-unless": "have-intel-gpu"
-        }
-    },
     "sdk": "org.gnome.Sdk",
     "command": "mirrorhall",
     "finish-args": [
@@ -35,9 +24,6 @@
         "/share/pkgconfig",
         "*.la",
         "*.a"
-    ],
-    "cleanup-commands": [
-        "mkdir -p ${FLATPAK_DEST}/lib/gstreamer-1.0"
     ],
     "modules": [
         "python3-requirements.json",
