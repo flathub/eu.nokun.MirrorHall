@@ -5,6 +5,7 @@
     "sdk": "org.gnome.Sdk",
     "command": "mirrorhall",
     "finish-args": [
+        "--env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0:/usr/lib/extensions/codecs-extra/lib/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0",
         "--share=network",
         "--share=ipc",
         "--device=dri",
