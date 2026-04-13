@@ -10,7 +10,7 @@
         "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--filesystem=xdg-run/pipewire-0",
+        "--filesystem=xdg-run/pipewire-0:ro",
         "--talk-name=org.gnome.Mutter.ScreenCast",
         "--env=GST_DEBUG=2"
     ],
