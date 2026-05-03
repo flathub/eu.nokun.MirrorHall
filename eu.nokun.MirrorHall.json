@@ -1,7 +1,7 @@
 {
-    "app-id": "eu.nokun.MirrorHall",
+    "id": "eu.nokun.MirrorHall",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "mirrorhall",
     "finish-args": [
@@ -16,14 +16,12 @@
     ],
     "cleanup": [
         "/include",
+        "/lib/girepository-1.0",
         "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "*.la",
-        "*.a"
+        "/share/gir-1.0"
+    ],
+    "cleanup-commands": [
+        "python3 -m compileall --invalidation-mode=unchecked-hash /app"
     ],
     "modules": [
         "python3-requirements.json",
@@ -34,19 +32,28 @@
                 {
                     "type": "git",
                     "url": "https://github.com/GStreamer/gst-rtsp-server",
-                    "tag": "1.19.2"
+                    "tag": "1.19.2",
+                    "commit": "0b037e35e7ed3259ca05be748c382bc40e2cdd91"
                 }
             ]
         },
         {
             "name": "mirrorhall",
-            "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.com/nokun/mirrorhall",
-                    "tag": "0.1.1"
+                    "url": "https://gitlab.com/nokun/mirrorhall.git",
+                    "tag": "0.1.1",
+                    "commit": "831b7dd2044e080c432890782290cef8a9a800cf",
+                    "x-checker-data": {
+                        "is-main-source": true,
+                        "type": "git"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-appdata.patch"
                 }
             ]
         }
