@@ -4,16 +4,32 @@
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-packaging",
+            "name": "python3-meson-python",
             "buildsystem": "simple",
+            "cleanup": ["*"],
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"packaging\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson-python\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl",
-                    "sha256": "994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61"
+                    "url": "https://files.pythonhosted.org/packages/16/7f/d1b0c65b267a1463d752b324f11d3470e30889daefc4b9ec83029bfa30b5/meson_python-0.19.0-py3-none-any.whl",
+                    "sha256": "67b5906c37404396d23c195e12c8825506074460d4a2e7083266b845d14f0298",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "meson-python",
+                        "packagetype": "bdist_wheel"
+                    }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/1d/0b/da4851b1e2d9c40c9bd74c0abd94510a7d797da9ccde0a90e8953751ed4a/pyproject_metadata-0.11.0-py3-none-any.whl",
+                    "sha256": "85bbecca8694e2c00f63b492c96921d6c228454057c88e7c352b2077fcaa4096",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "pyproject-metadata",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -26,32 +42,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl",
-                    "sha256": "939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"
-                }
-            ]
-        },
-        {
-            "name": "python3-meson-python",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"meson-python\" --no-build-isolation"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/86/06/369125aa34e9b6d83001c636cdd1c77473aac5d5f6b446047cf20a25c88a/meson_python-0.14.0-py3-none-any.whl",
-                    "sha256": "fa69fa2a074d8c6772223b1efe679c34d572f3c817d601a7cbd4681a81c40077"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ab/c3/57f0601a2d4fe15de7a553c00adbc901425661bf048f2a22dfc500caf121/packaging-23.1-py3-none-any.whl",
-                    "sha256": "994793af429502c4ea2ebf6bf664629d07c1a9fe974af92966e4b8d2df7edc61"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c4/cb/4678dfd70cd2f2d8969e571cdc1bb1e9293c698f8d1cf428fadcf48d6e9f/pyproject_metadata-0.7.1-py3-none-any.whl",
-                    "sha256": "28691fbb36266a819ec56c9fa1ecaf36f879d6944dfde5411e87fc4ff793aa60"
+                    "url": "https://files.pythonhosted.org/packages/7b/61/cceae43728b7de99d9b847560c262873a1f6c98202171fd5ed62640b494b/tomli-2.4.1-py3-none-any.whl",
+                    "sha256": "0d85819802132122da43cb86656f8d1f8c6587d54ae7dcaf30e90533028b49fe",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "tomli",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -64,8 +61,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bf/d4/ce72ac247f414d15ff046f0926b76eb42bd743e83c1df28e856f328e3db1/poetry_core-1.7.0-py3-none-any.whl",
-                    "sha256": "38e174cdb00a84ee4a1cab66a378b435747f72414f5573bc18cfc3850a94df38"
+                    "url": "https://files.pythonhosted.org/packages/0e/38/646023abf93e47c6808cbee82423324505ec075d7b90a22654765e1eade7/poetry_core-2.3.2-py3-none-any.whl",
+                    "sha256": "23df641b64f87fbb4ce1873c1915a4d4bb1b7d808c596e4307edc073e68d7234",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "poetry-core",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -78,8 +80,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a7/fa/e01228c2938de91d47b307831c62ab9e4001e747789d0b05baf779a6488c/async_timeout-4.0.3-py3-none-any.whl",
-                    "sha256": "7405140ff1230c310e51dc27b3145b9092d659ce68ff733fb0cefe3ee42be028"
+                    "url": "https://files.pythonhosted.org/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl",
+                    "sha256": "39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "async-timeout",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -93,7 +100,12 @@
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/9c/1f/19ebc343cc71a7ffa78f17018535adc5cbdd87afb31d7c34874680148b32/ifaddr-0.2.0-py3-none-any.whl",
-                    "sha256": "085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748"
+                    "sha256": "085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "ifaddr",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -107,12 +119,21 @@
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/9c/1f/19ebc343cc71a7ffa78f17018535adc5cbdd87afb31d7c34874680148b32/ifaddr-0.2.0-py3-none-any.whl",
-                    "sha256": "085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748"
+                    "sha256": "085e0305cfe6f16ab12d72e2024030f5d52674afad6911bb1eee207177b8a748",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "ifaddr",
+                        "packagetype": "bdist_wheel"
+                    }
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fa/a0/f19c65e1079ca558bf235c2acb5df37fe5897e5a5dcfed39383c6f62ed16/zeroconf-0.108.0.tar.gz",
-                    "sha256": "a6589e68f9e629b848cf23b5b490f3323e363c5b08927436c2fb17aaa83b4fda"
+                    "url": "https://files.pythonhosted.org/packages/67/46/10db987799629d01930176ae523f70879b63577060d63e05ebf9214aba4b/zeroconf-0.148.0.tar.gz",
+                    "sha256": "03fcca123df3652e23d945112d683d2f605f313637611b7d4adf31056f681702",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "zeroconf"
+                    }
                 }
             ]
         },
@@ -126,7 +147,11 @@
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/a6/91/86a6eac449ddfae239e93ffc1918cf33fd9bab35c04d1e963b311e347a73/netifaces-0.11.0.tar.gz",
-                    "sha256": "043a79146eb2907edf439899f262b3dfe41717d34124298ed281139a8b93ca32"
+                    "sha256": "043a79146eb2907edf439899f262b3dfe41717d34124298ed281139a8b93ca32",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "netifaces"
+                    }
                 }
             ]
         }
